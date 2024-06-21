@@ -1,16 +1,12 @@
 # [JSL06] Submission: CodeCuisine Menu Display System Challenge
 
-You will:
-1. Use the provided Starter Code Repository: https://github.com/CodeSpace-Academy/Module_6_StudentNo_Classcode_Group_Name-Surname_JSL06
-2. Code your solution.
-3. Commit changes to your GitHub repository.
-4. Submit the GitHub Repository Link to the LMS [JSL06] Submission Project Tab.
+# Menu and Order System
 
-In this coding challenge, you will build a simple menu display system for a fictional UberEats restaurant called "CodeCuisine." The goal is to display different categories of food items and allow users to add items to their order with a click. This challenge will help you apply various JavaScript concepts, including functions, closures, and event handling, to create an interactive menu.
+## Overview
 
-![alt text](JSL06-solution.gif)
+This project is a simple menu and order system implemented using JavaScript. It dynamically populates menu items on the webpage and allows users to add items to their order. The total price is automatically calculated and updated. The project demonstrates the use of functions, callbacks, closures, function expressions, and anonymous functions.
 
-## Objectives:
+## Objectives
 
 - Create and use functions to dynamically populate the menu items on the page.
 - Implement a callback function to handle adding items to the order.
@@ -18,42 +14,46 @@ In this coding challenge, you will build a simple menu display system for a fict
 - Utilize function expressions and anonymous functions.
 - Call built-in functions and create custom functions to manage the menu and order system.
 
-## Instructions:
+## File Structure
 
-1. **Use the Project Files:** Begin by accessing the starter code in the JSL06 GitHub repo.
+- index.html: Contains the HTML structure and includes the JavaScript script.
+- style.css: Optional file for additional styling.
+- script.js: Contains the JavaScript code to manage the menu and order system.
 
-2. **JavaScript Implementation**: Use the provided starter code in `index.js` as a foundation for your application. The starter code contains placeholders for key functions and comments to guide you through the implementation.
+# Instructions
 
-    - `menu`: The `menu` object contains sample menu data, including categories and items. You can expand this menu with more items if needed.
+## HTML Structure
 
-    - `displayMenuItems(menu)`: This function should dynamically create and display menu items grouped by category. Iterate over the `menu` object and create HTML elements for each category and item. Attach event listeners to the menu items to handle adding items to the order.
+The HTML file defines the structure for the menu and order display, including sections for the menu and the order.
 
-    - `addToOrder(itemName)`: Implement this callback function to update the order summary when an item is added. You can use closures to maintain the state of the order. Calculate and update the total price accordingly.
+## JavaScript Code
 
-    - `initMenuSystem(menu)`: Call the `displayMenuItems` function with the menu data and attach event listeners to menu items.
+1. Create and use functions to dynamically populate the menu items on the page
+   The displayMenuItems function iterates over the menu object and creates HTML elements to display the categories and their respective items.
 
-3. **Testing**: Thoroughly test your application to ensure that it can correctly add items to the order and that the order total updates as expected.
+2. Implement a callback function to handle adding items to the order
+   The addToOrder function is used as a callback to handle the click event on menu items.
 
-## What You Need to Do:
+3. Use closures to maintain the state of the order
+   The state of the order (total price) is maintained through the closure created by the addToOrder function. The function updates the total price each time a new item is added to the order.
 
-To complete this challenge, follow these steps:
+4. Utilize function expressions and anonymous functions
+   Anonymous functions are used as event handlers for the click events on menu items.
 
-1. Clone the provided Starter Code Repository to your local development environment: [Starter Code Repository](https://github.com/CodeSpace-Academy/Module_6_StudentNo_Classcode_Group_Name-Surname_JSL06).
-2. Open the cloned project in your code editor.
-3. Code your solution following the provided instructions and comments in the starter code.
-4. Commit your changes to your local Git repository with meaningful commit messages.
-5. Push your local Git repository to your GitHub account.
-6. Verify that the changes have been successfully pushed to your GitHub repository.
+5. Call built-in functions and create custom functions to manage the menu and order system
+   The code makes use of several built-in functions such as querySelector, createElement, forEach, and textContent. Custom functions (displayMenuItems and addToOrder) are created to manage the menu and order system.
 
-## What You Need to Include:
+## Initialization
 
-1. Ensure that your code includes the necessary modifications to meet the challenge requirements.
-2. Your GitHub repository should contain the updated code files.
+The initMenuSystem function initializes the menu system by calling displayMenuItems.
 
-## How We'll Assess Your Work:
+## Running the Project
 
-1. We will review your GitHub repository to ensure that it contains the updated code files.
-2. We will assess the modifications made to the code to verify that they effectively meet the challenge requirements.
-3. We will consider the commit history and meaningful commit messages to evaluate your coding process.
+- Open index.html in a web browser.
+- The menu items will be displayed under the "Menu" section.
+- Click on a menu item to add it to the order.
+- The selected items will be listed under the "Order" section, and the total price will be updated accordingly.
 
-By following these steps and completing the challenge, you will demonstrate your ability to create interactive web applications using JavaScript. Good luck, and enjoy building the CodeCuisine Menu Display System!
+# Conclusion
+
+This project demonstrates how to dynamically populate a webpage with data, handle user interactions with callback functions, and maintain state using closures. The use of function expressions and anonymous functions adds flexibility and conciseness to the code.
