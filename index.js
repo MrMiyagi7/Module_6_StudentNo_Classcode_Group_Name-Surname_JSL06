@@ -24,6 +24,16 @@ function displayMenuItems(menu) {
     menuContainer.appendChild(category);
     let list = document.createElement("ul");
     menuContainer.appendChild(list);
+    value.forEach((menuItem) => {
+      let listItem = document.createElement("li");
+      listItem.textContent = menuItem.dish;
+      listItem.addEventListener("click", () => addToOrder(menuItem));
+      list.appendChild(listItem);
+    });
+  });
+
+  // Callback function for adding an item to the order
+}
 function addToOrder(menuItem) {
   const orderList = document.querySelector("#order-items");
   let orderTotalElement = document.querySelector("#order-total");
