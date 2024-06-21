@@ -24,6 +24,15 @@ function displayMenuItems(menu) {
     menuContainer.appendChild(category);
     let list = document.createElement("ul");
     menuContainer.appendChild(list);
+function addToOrder(menuItem) {
+  const orderList = document.querySelector("#order-items");
+  let orderTotalElement = document.querySelector("#order-total");
+  let orderItem = document.createElement("li");
+  let orderTotal = parseFloat(orderTotalElement.textContent);
+  orderItem.textContent = menuItem.dish;
+  orderList.appendChild(orderItem);
+  let newTotal = orderTotal + menuItem.price;
+  orderTotalElement.textContent = newTotal.toFixed(2);
 }
 
 // Function to initialize the menu system
