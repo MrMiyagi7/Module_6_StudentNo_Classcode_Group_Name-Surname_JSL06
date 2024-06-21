@@ -16,21 +16,14 @@ const menu = {
 // Function to display menu items by category
 function displayMenuItems(menu) {
   const menuContainer = document.querySelector("#menu");
-}
 
-// Callback function for adding an item to the order
-function addToOrder(itemName) {
-    // Get the order items list and the order total element from the HTML
-
-    // Create a list item for the order
-
-    // Set the text content of the list item to the item name
-
-    // Append the list item to the order items list
-
-    // Calculate and update the total price
-
-    // Update the text content of the order total element with the new total
+  // Loop through each category and its items in the menu object
+  Object.entries(menu).forEach(([key, value]) => {
+    let category = document.createElement("h2");
+    category.textContent = key;
+    menuContainer.appendChild(category);
+    let list = document.createElement("ul");
+    menuContainer.appendChild(list);
 }
 
 // Function to initialize the menu system
